@@ -11,9 +11,6 @@ function enlargeYes() {
   var yesBtn = document.getElementById('yesBtn');
   var currentFontSize = parseInt(window.getComputedStyle(yesBtn, null).getPropertyValue('font-size'));
   yesBtn.style.fontSize = (currentFontSize * 1.5) + 'px'; // Увеличиваем размер кнопки "Да"
-  if (currentFontSize < 100) { // Проверяем, не достигли ли мы предельного размера
-    setTimeout(enlargeYes, 500); // Вызываем функцию enlargeYes() через 500 миллисекунд
-  }
 }
 
 function showMessage(message) {
